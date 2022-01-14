@@ -29,7 +29,7 @@ Beautifully-designed print-ready [PDF](https://node.university/p/library)
 
 ## Mongoose Basic Usage
 
-```
+```javascript
 var mongoose = require('mongoose')
 var dbUri = 'mongodb://localhost:27017/api'
 var dbConnection = mongoose.createConnection(dbUri)
@@ -58,7 +58,7 @@ Post.find({},function(error, posts){
 
 ## Create, Read, Update, Delete (CRUD) Mongoose Example
 
-```
+```javascript
 // Create
 var post = new Post({title: 'a', text: 'b')
 post.save(function(error, document){
@@ -113,7 +113,7 @@ Post.findOne(criteria, function(error, post) {
 * `validate(callback)`: validate the document
 
 ## Query Helpers
-```
+```javascript
 animalSchema.query.byName = function(name) {
     return this.where({ name: new RegExp(name, 'i') });
   };
@@ -129,7 +129,7 @@ animalSchema.query.byName = function(name) {
   });
  ``` 
   ## Indexes
- ```
+ ```javascript
   var animalSchema = new Schema({
     name: String,
     type: String,
